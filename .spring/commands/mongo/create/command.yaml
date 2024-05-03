@@ -1,0 +1,21 @@
+command:
+  description: Create mongo-init.js to initialize database
+  options:
+    #
+    - name: username
+      description: user with readWrite permissions in database
+      dataType: string
+      defaultValue: test
+      inputType: text
+
+    - name: password
+      description: password for the previous user
+      dataType: string
+      defaultValue: test
+      inputType: text
+
+    - name: database
+      description: database name to which user can connect
+      dataType: string
+      defaultValue: test
+      inputType: text

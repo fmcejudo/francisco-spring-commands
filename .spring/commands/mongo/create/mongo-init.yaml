@@ -1,0 +1,14 @@
+actions:
+  - generate:
+      to: ./docker-initializer/mongo-init.js
+      text: |
+        db = db.getSiblingDB('{{database}}');
+        
+        db.createUser({
+          user: "{{username}}",
+          pwd: "{{password}}",
+          roles: [{
+            role: 'readWrite',
+            db: '{{database}}'
+          }]
+        });
